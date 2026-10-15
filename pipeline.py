@@ -26,7 +26,7 @@ def collect_image_paths(data_dir):
     dir_filter = futil.DataDirectoryFilter()
 
     # todo: create an instance of futil.FileSystemDataCrawler and pass the correpsonding arguments
-    crawler = None  # todo: modify here
+    crawler = futil.FileSystemDataCrawler(data_dir, image_keys, MyFilePathGenerator, dir_filter, 'nii.gz')
 
     return crawler
 
